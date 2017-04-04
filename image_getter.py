@@ -24,7 +24,8 @@ if thumbnail_spec and thumbnail_spec['href']:
 #   print image % urlparse.urljoin(url, img["src"])
 #   print ''
 
-image = []
-for img in soup.findAll("img", src=True):	
-   image.append(img["src"])
-print image
+def image_get():
+    image = []
+    for img in soup.findAll("img", src=True):	
+       image.append(img["src"])
+    return image
